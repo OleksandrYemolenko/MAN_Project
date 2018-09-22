@@ -59,7 +59,7 @@ public class PhysicsActivity extends AppCompatActivity {
             holder.itemView.setOnClickListener (new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getApplicationContext(), Integer.toString(position), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), Integer.toString(position + 1), Toast.LENGTH_SHORT).show();
                 }
             });
         }
