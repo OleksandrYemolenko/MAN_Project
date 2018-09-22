@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="178dp"
+            android:layout_height="178dp"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/code_img"
+            android:onClick="Algos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/akgos_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageButton"
+            android:layout_centerHorizontal="true"
+            android:text="Algos"
+            android:textColor="#ffa1a1a1"
+            android:textSize="35sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="20dp">
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/math_img"
+                android:onClick="Math"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Math"
+                android:layout_below="@+id/imageButton2"
+                android:textColor="#ffa1a1a1"
+                android:textSize="35sp"
+                android:paddingLeft="23dp"
+                app:layout_constraintStart_toStartOf="@+id/imageButton2"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="90dp"
+            android:paddingRight="20dp">
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:background="@drawable/physics_img"
+                android:onClick="Physics"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Physics"
+                android:layout_below="@+id/imageButton3"
+                android:textColor="#ffa1a1a1"
+                android:textSize="35sp"
+                android:paddingRight="23dp"
+                app:layout_constraintStart_toStartOf="@+id/imageButton3"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
