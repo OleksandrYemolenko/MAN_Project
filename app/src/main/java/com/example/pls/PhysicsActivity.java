@@ -16,6 +16,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+
+// Git works
+
 public class PhysicsActivity extends AppCompatActivity {
 
     private RecyclerView recView;
@@ -59,7 +62,7 @@ public class PhysicsActivity extends AppCompatActivity {
             holder.itemView.setOnClickListener (new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getApplicationContext(), Integer.toString(position + 1), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), Integer.toString(position), Toast.LENGTH_SHORT).show();
                 }
             });
         }
