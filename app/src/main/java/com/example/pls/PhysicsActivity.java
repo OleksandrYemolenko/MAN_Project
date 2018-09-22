@@ -24,6 +24,7 @@ public class PhysicsActivity extends AppCompatActivity {
     private RecyclerView recView;
     private LinearLayoutManager manager;
     private RecyclerAdapter adapter;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,17 @@ public class PhysicsActivity extends AppCompatActivity {
         adapter = new RecyclerAdapter();
         recView.setAdapter(adapter);
         adapter.addAll(RecyclerItem.getPhysicsItem());
+    }
+
+    public void ChangeActivity(int pos) {
+        try {
+            intent = new Intent(this, ContentPageActivity.class);
+            intent.putExtra("pos", pos);
+            intent.putExtra("act", "p");
+            startActivity(intent);
+        } catch(Exception e) {
+            Toast.makeText(getApplicationContext(), "Exception", Toast.LENGTH_LONG).show();
+        }
     }
 
     public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
@@ -62,7 +74,7 @@ public class PhysicsActivity extends AppCompatActivity {
             holder.itemView.setOnClickListener (new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getApplicationContext(), Integer.toString(position), Toast.LENGTH_SHORT).show();
+                    ChangeActivity(position);
                 }
             });
         }

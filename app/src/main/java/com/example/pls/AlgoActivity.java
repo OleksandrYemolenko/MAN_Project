@@ -42,10 +42,12 @@ public class AlgoActivity extends AppCompatActivity {
         adapter.addAll(RecyclerItem.getAlgosItem());
     }
 
-    public void ChangeActivity(int pos) {
+    public void ChangeActivity(int pos, String title) {
         try {
             intent = new Intent(this, ContentPageActivity.class);
             intent.putExtra("pos", pos);
+            intent.putExtra("act", "a");
+            intent.putExtra("title", title);
             startActivity(intent);
         } catch(Exception e) {
             Toast.makeText(getApplicationContext(), "Exception", Toast.LENGTH_LONG).show();
@@ -75,7 +77,7 @@ public class AlgoActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                    // Toast.makeText(getApplicationContext(), Integer.toString(position), Toast.LENGTH_SHORT).show();
-                    ChangeActivity(position);
+                    ChangeActivity(position, items.get(position).getTitle());
 
                 }
             });

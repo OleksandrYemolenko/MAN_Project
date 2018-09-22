@@ -37,7 +37,10 @@
                 <category android:name="android.intent.category.ALGOS" />
             </intent-filter>
         </activity>
-        <activity android:name=".ContentPageActivity">
+        <activity
+            android:name=".ContentPageActivity"
+            android:label="@string/title_activity_content_page"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.CONTENTPAGE" />
 
