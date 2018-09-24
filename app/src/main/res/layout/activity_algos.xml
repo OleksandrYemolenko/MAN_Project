@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#e9e9e9"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:fitsSystemWindows="true"
+        android:background="#dedede"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbara">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbara"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/algoRecView"
+        android:paddingTop="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="258dp"
         tools:layout_editor_absoluteY="89dp" />
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

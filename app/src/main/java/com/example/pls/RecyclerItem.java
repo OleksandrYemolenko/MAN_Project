@@ -35,6 +35,15 @@ public class RecyclerItem {
         itemList.add(new RecyclerItem("DFS", "Graph Search"));
         itemList.add(new RecyclerItem("DFp", "Graph Search1"));
         itemList.add(new RecyclerItem("DFl", "Graph Search2"));
+        itemList.add(new RecyclerItem("DFl", "Graph Search2"));
+        itemList.add(new RecyclerItem("DFl", "Graph Search2"));
+        itemList.add(new RecyclerItem("DFl", "Graph Search2"));
+        itemList.add(new RecyclerItem("DFl", "Graph Search2"));
+        itemList.add(new RecyclerItem("DFl", "Graph Search2"));
+        itemList.add(new RecyclerItem("DFl", "Graph Search2"));
+        itemList.add(new RecyclerItem("DFl", "Graph Search2"));
+        itemList.add(new RecyclerItem("DFl", "Graph Search2"));
+        itemList.add(new RecyclerItem("DFl", "Graph Search2"));
         return itemList;
     }
     public static List<RecyclerItem> getMathItem() {
