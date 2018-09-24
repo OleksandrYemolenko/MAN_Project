@@ -6,19 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="#e9e9e9"
+    android:background="#10171E"
     android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="58dp"
         android:fitsSystemWindows="true"
-        android:background="#dedede"
+        android:background="@drawable/gradient"
         android:theme="@style/AppTheme.AppBarOverlay">
-
-
-
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbara"
                 android:layout_width="match_parent"
@@ -30,9 +27,9 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/algoRecView"
-        android:paddingTop="3dp"
-        android:paddingLeft="3dp"
-        android:paddingRight="3dp"
+        android:paddingTop="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="258dp"

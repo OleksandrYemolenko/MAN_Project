@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="75dp"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card"
-    android:layout_marginBottom="2dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginTop="2dp"
-    card_view:cardBackgroundColor="@android:color/white"
-    card_view:cardCornerRadius="4dp"
+    android:layout_marginBottom="1dp"
+    card_view:cardBackgroundColor="#1C2733"
+    card_view:cardCornerRadius="0dp"
     card_view:cardElevation="0dp">
 
     <LinearLayout
@@ -23,16 +20,22 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            tools:text="Algorithm name"/>
+            tools:text="Algorithm name"
+            android:textColor="#F3F3F4"/>
         <TextView
             android:id="@+id/desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            tools:text="Little description"/>
+            tools:text="Little description"
+            android:textColor="#F3F3F4"/>
 
     </LinearLayout>
 
