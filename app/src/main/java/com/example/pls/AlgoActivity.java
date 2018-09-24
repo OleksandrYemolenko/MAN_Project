@@ -27,6 +27,7 @@ public class AlgoActivity extends AppCompatActivity {
     private LinearLayoutManager manager;
     private RecyclerAdapter adapter;
     private Intent intent;
+    private String title;
 
 
 
@@ -39,12 +40,12 @@ public class AlgoActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_algos);
-
-        setContentView(R.layout.activity_algos);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbara);
         setSupportActionBar(toolbar);
 
-        setTitle("Алгоритмы");
+        title = "Algos";
+
+        setTitle(title);
 
         recView = findViewById(R.id.algoRecView);
 
