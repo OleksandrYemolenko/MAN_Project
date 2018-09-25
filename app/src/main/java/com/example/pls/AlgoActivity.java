@@ -1,6 +1,5 @@
 package com.example.pls;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -11,12 +10,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Adapter;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.r0adkll.slidr.Slidr;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +39,7 @@ public class AlgoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_algos);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbara);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         title = "Алгоритмы";
 
@@ -56,11 +54,13 @@ public class AlgoActivity extends AppCompatActivity {
         adapter = new RecyclerAdapter();
         recView.setAdapter(adapter);
         adapter.addAll(RecyclerItem.getAlgosItem());
+
+        Slidr.attach(this);
     }
 
     public void ChangeActivity(int pos, String title) {
         try {
-            intent = new Intent(this, ContentPageActivity.class);
+            intent = new Intent(this, AlgoContentPageActivity.class);
             intent.putExtra("pos", pos);
             intent.putExtra("act", "a");
             intent.putExtra("title", title);

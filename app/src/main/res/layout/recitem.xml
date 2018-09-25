@@ -6,9 +6,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card"
     android:layout_marginBottom="1dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="8dp"
     card_view:cardBackgroundColor="#1C2733"
     card_view:cardCornerRadius="0dp"
-    card_view:cardElevation="0dp">
+    card_view:cardElevation="3dp">
 
     <LinearLayout
         android:id="@+id/card_content"

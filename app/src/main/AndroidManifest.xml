@@ -1,5 +1,6 @@
 <?xml version="1.1" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.pls">
 
     <application
@@ -16,21 +17,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AlgoActivity">
+        <activity android:name=".AlgoActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.SlidrActivityTheme"
+            tools:targetApi="jelly_bean">
             <intent-filter>
                 <action android:name="android.intent.action.ALGOS" />
 
                 <category android:name="android.intent.category.ALGOS" />
             </intent-filter>
         </activity>
-        <activity android:name=".MathActivity">
+        <activity android:name=".MathActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.SlidrActivityTheme"
+            tools:targetApi="jelly_bean">
             <intent-filter>
                 <action android:name="android.intent.action.ALGOS" />
 
                 <category android:name="android.intent.category.ALGOS" />
             </intent-filter>
         </activity>
-        <activity android:name=".PhysicsActivity">
+        <activity android:name=".PhysicsActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.SlidrActivityTheme"
+            tools:targetApi="jelly_bean">
             <intent-filter>
                 <action android:name="android.intent.action.ALGOS" />
 
@@ -38,9 +48,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ContentPageActivity"
+            android:parentActivityName=".AlgoActivity"
+            android:name=".AlgoContentPageActivity"
             android:label="@string/title_activity_content_page"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme.SlidrActivityTheme">
             <intent-filter>
                 <action android:name="android.intent.action.CONTENTPAGE" />
 

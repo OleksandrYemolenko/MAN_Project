@@ -50,11 +50,36 @@ public class RecyclerItem {
         ArrayList<RecyclerItem> itemList = new ArrayList<>();
 
         itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
         return itemList;
     }
     public static List<RecyclerItem> getPhysicsItem() {
         ArrayList<RecyclerItem> itemList = new ArrayList<>();
 
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
+        itemList.add(new RecyclerItem("DFS", "Graph Search"));
         itemList.add(new RecyclerItem("DFS", "Graph Search"));
         return itemList;
     }

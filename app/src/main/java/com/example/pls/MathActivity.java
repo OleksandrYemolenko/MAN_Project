@@ -6,14 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.r0adkll.slidr.Slidr;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +24,7 @@ public class MathActivity extends AppCompatActivity {
     private LinearLayoutManager manager;
     private RecyclerAdapter adapter;
     private Intent intent;
+    private String title;
 
 
 
@@ -31,11 +32,14 @@ public class MathActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_math);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarc);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        title = "Математика";
+
+        setTitle(title);
 
         recView = findViewById(R.id.mathRecView);
 
@@ -46,11 +50,13 @@ public class MathActivity extends AppCompatActivity {
         adapter = new RecyclerAdapter();
         recView.setAdapter(adapter);
         adapter.addAll(RecyclerItem.getMathItem());
+
+        Slidr.attach(this);
     }
 
     public void ChangeActivity(int pos) {
         try {
-            intent = new Intent(this, ContentPageActivity.class);
+            intent = new Intent(this, AlgoContentPageActivity.class);
             intent.putExtra("pos", pos);
             intent.putExtra("act", "m");
             startActivity(intent);
